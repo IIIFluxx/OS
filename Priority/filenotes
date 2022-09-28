@@ -1,0 +1,10 @@
+{Arr} {Bur} {Priority}
+0 8 3
+1 1 1
+2 3 2
+3 2 3
+4 6 4
+https://www.geeksforgeeks.org/difference-between-preemptive-priority-based-and-non-preemptive-priority-based-cpu-scheduling-algorithms/
+
+Avg WT = 4.6
+Avg TT should be 8.6 not 8.5 (website is wrong) because 43/5 = 8.6

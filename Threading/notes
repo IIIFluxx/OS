@@ -1,0 +1,31 @@
+===== MAIN() =====
+
+do
+{
+    scanf for filename
+    pthread_cond_broadcast(&read); --- Kickstarts reading process.
+
+} while filename != EXIT
+
+
+
+===== THREADS =====
+while (filename not received --- check for 0\) --- busy wait until filename received.
+{
+    pthread_cond_wait(&read, lock); // This gets unlocked when filename received.
+}
+
+==============================
+==============================
+
+===== MAIN() =====
+
+while (results not received) 
+{
+    pthread_cond_wait(&calculated, lock);
+}
+
+
+===== THREADS =====
+
+pthread_signal(&calculated);
